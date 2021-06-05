@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A098CD026659104002EB446 /* HomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A098CCF26659104002EB446 /* HomePageTableViewCell.swift */; };
+		4A30571D2665A82C00980D07 /* HomePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30571C2665A82C00980D07 /* HomePageTableViewController.swift */; };
+		4A3057202665BF0200980D07 /* DrinkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30571F2665BF0200980D07 /* DrinkDetailViewController.swift */; };
+		4A3057232665C61900980D07 /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3057222665C61900980D07 /* SearchPageViewController.swift */; };
+		4A32B4A026670F4600920139 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A32B49F26670F4600920139 /* FavoritesViewController.swift */; };
+		4A32B4A4266ACD6600920139 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A32B4A3266ACD6600920139 /* Recipe.swift */; };
+		4A4F5C29266B98D300648284 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F5C28266B98D300648284 /* IngredientTableViewCell.swift */; };
+		4A73D44D266C1A320081952C /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73D44C266C1A320081952C /* ShoppingListViewController.swift */; };
 		4AAFF7312662D04B003AE626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7302662D04B003AE626 /* AppDelegate.swift */; };
 		4AAFF7332662D04B003AE626 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7322662D04B003AE626 /* SceneDelegate.swift */; };
 		4AAFF7352662D04B003AE626 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7342662D04B003AE626 /* ViewController.swift */; };
@@ -14,9 +22,20 @@
 		4AAFF73B2662D04B003AE626 /* DrinkRecipeApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7392662D04B003AE626 /* DrinkRecipeApp.xcdatamodeld */; };
 		4AAFF73D2662D04C003AE626 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4AAFF73C2662D04C003AE626 /* Assets.xcassets */; };
 		4AAFF7402662D04C003AE626 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4AAFF73E2662D04C003AE626 /* LaunchScreen.storyboard */; };
+		4AAFF74C2662D0CC003AE626 /* CocktailDBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF74B2662D0CC003AE626 /* CocktailDBResponse.swift */; };
+		4AAFF74F2662D10D003AE626 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF74E2662D10D003AE626 /* Drink.swift */; };
+		4AAFF7532662D994003AE626 /* CocktailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7522662D994003AE626 /* CocktailAPIService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A098CCF26659104002EB446 /* HomePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewCell.swift; sourceTree = "<group>"; };
+		4A30571C2665A82C00980D07 /* HomePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewController.swift; sourceTree = "<group>"; };
+		4A30571F2665BF0200980D07 /* DrinkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailViewController.swift; sourceTree = "<group>"; };
+		4A3057222665C61900980D07 /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
+		4A32B49F26670F4600920139 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		4A32B4A3266ACD6600920139 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		4A4F5C28266B98D300648284 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
+		4A73D44C266C1A320081952C /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		4AAFF72D2662D04B003AE626 /* DrinkRecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkRecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAFF7302662D04B003AE626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAFF7322662D04B003AE626 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +45,9 @@
 		4AAFF73C2662D04C003AE626 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4AAFF73F2662D04C003AE626 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4AAFF7412662D04C003AE626 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AAFF74B2662D0CC003AE626 /* CocktailDBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDBResponse.swift; sourceTree = "<group>"; };
+		4AAFF74E2662D10D003AE626 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		4AAFF7522662D994003AE626 /* CocktailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +61,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A098CC12665763E002EB446 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A30571C2665A82C00980D07 /* HomePageTableViewController.swift */,
+				4A30571F2665BF0200980D07 /* DrinkDetailViewController.swift */,
+				4A3057222665C61900980D07 /* SearchPageViewController.swift */,
+				4A32B49F26670F4600920139 /* FavoritesViewController.swift */,
+				4A73D44C266C1A320081952C /* ShoppingListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4A098CCD266590B7002EB446 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4A098CCE266590C3002EB446 /* Cells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4A098CCE266590C3002EB446 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4A098CCF26659104002EB446 /* HomePageTableViewCell.swift */,
+				4A4F5C28266B98D300648284 /* IngredientTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		4A32B4A2266ACD4400920139 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4A32B4A3266ACD6600920139 /* Recipe.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		4AAFF7242662D04B003AE626 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +117,10 @@
 		4AAFF72F2662D04B003AE626 /* DrinkRecipeApp */ = {
 			isa = PBXGroup;
 			children = (
+				4A098CCD266590B7002EB446 /* View */,
+				4A098CC12665763E002EB446 /* Controllers */,
+				4AAFF7512662D96E003AE626 /* Resources */,
+				4AAFF7482662D058003AE626 /* Model */,
 				4AAFF7302662D04B003AE626 /* AppDelegate.swift */,
 				4AAFF7322662D04B003AE626 /* SceneDelegate.swift */,
 				4AAFF7342662D04B003AE626 /* ViewController.swift */,
@@ -68,6 +131,32 @@
 				4AAFF7392662D04B003AE626 /* DrinkRecipeApp.xcdatamodeld */,
 			);
 			path = DrinkRecipeApp;
+			sourceTree = "<group>";
+		};
+		4AAFF7482662D058003AE626 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4A32B4A2266ACD4400920139 /* Data */,
+				4AAFF74A2662D07B003AE626 /* CocktailDB */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4AAFF74A2662D07B003AE626 /* CocktailDB */ = {
+			isa = PBXGroup;
+			children = (
+				4AAFF74B2662D0CC003AE626 /* CocktailDBResponse.swift */,
+				4AAFF74E2662D10D003AE626 /* Drink.swift */,
+			);
+			path = CocktailDB;
+			sourceTree = "<group>";
+		};
+		4AAFF7512662D96E003AE626 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4AAFF7522662D994003AE626 /* CocktailAPIService.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,10 +229,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AAFF7532662D994003AE626 /* CocktailAPIService.swift in Sources */,
+				4A098CD026659104002EB446 /* HomePageTableViewCell.swift in Sources */,
+				4A73D44D266C1A320081952C /* ShoppingListViewController.swift in Sources */,
+				4A4F5C29266B98D300648284 /* IngredientTableViewCell.swift in Sources */,
 				4AAFF73B2662D04B003AE626 /* DrinkRecipeApp.xcdatamodeld in Sources */,
 				4AAFF7352662D04B003AE626 /* ViewController.swift in Sources */,
+				4A3057202665BF0200980D07 /* DrinkDetailViewController.swift in Sources */,
+				4AAFF74C2662D0CC003AE626 /* CocktailDBResponse.swift in Sources */,
+				4A3057232665C61900980D07 /* SearchPageViewController.swift in Sources */,
 				4AAFF7312662D04B003AE626 /* AppDelegate.swift in Sources */,
+				4AAFF74F2662D10D003AE626 /* Drink.swift in Sources */,
 				4AAFF7332662D04B003AE626 /* SceneDelegate.swift in Sources */,
+				4A32B4A4266ACD6600920139 /* Recipe.swift in Sources */,
+				4A32B4A026670F4600920139 /* FavoritesViewController.swift in Sources */,
+				4A30571D2665A82C00980D07 /* HomePageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

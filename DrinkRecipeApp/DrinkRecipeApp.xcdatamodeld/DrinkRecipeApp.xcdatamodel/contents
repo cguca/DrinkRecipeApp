@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DrinkModel" representedClassName="DrinkModel" syncable="YES" codeGenerationType="class">
+        <attribute name="alchoholic" optional="YES" attributeType="String"/>
+        <attribute name="category" optional="YES" attributeType="String"/>
+        <attribute name="drinkAlternative" optional="YES" attributeType="String"/>
+        <attribute name="glass" optional="YES" attributeType="String"/>
+        <attribute name="iba" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="instructions" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="tags" optional="YES" attributeType="String"/>
+        <attribute name="thumbImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientModel" inverseName="drink" inverseEntity="IngredientModel"/>
+    </entity>
+    <entity name="IngredientModel" representedClassName="IngredientModel" syncable="YES" codeGenerationType="class">
+        <attribute name="index" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="measure" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="thumbImage" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
+        <relationship name="drink" optional="YES" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="DrinkModel" inverseName="ingredients" inverseEntity="DrinkModel"/>
+    </entity>
+    <entity name="ShoppingListModel" representedClassName="ShoppingListModel" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="DrinkModel" positionX="-502.1171875" positionY="8.3203125" width="128" height="208"/>
+        <element name="IngredientModel" positionX="-66.3515625" positionY="-28.42578125" width="128" height="118"/>
+        <element name="ShoppingListModel" positionX="-297" positionY="81" width="128" height="58"/>
+    </elements>
 </model>
