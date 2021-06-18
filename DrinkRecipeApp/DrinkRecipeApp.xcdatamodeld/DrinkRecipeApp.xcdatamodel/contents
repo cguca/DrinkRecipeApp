@@ -21,11 +21,12 @@
         <relationship name="drink" optional="YES" maxCount="1" deletionRule="Nullify" ordered="YES" destinationEntity="DrinkModel" inverseName="ingredients" inverseEntity="DrinkModel"/>
     </entity>
     <entity name="ShoppingListModel" representedClassName="ShoppingListModel" syncable="YES" codeGenerationType="class">
+        <attribute name="image" optional="YES" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="DrinkModel" positionX="-502.1171875" positionY="8.3203125" width="128" height="208"/>
         <element name="IngredientModel" positionX="-66.3515625" positionY="-28.42578125" width="128" height="118"/>
-        <element name="ShoppingListModel" positionX="-297" positionY="81" width="128" height="58"/>
+        <element name="ShoppingListModel" positionX="-297" positionY="81" width="128" height="73"/>
     </elements>
 </model>

@@ -18,6 +18,11 @@ class SearchPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.tabBar.isHidden = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
     }
     
     // MARK: - Navigation
@@ -26,7 +31,7 @@ class SearchPageViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             let detailVC = segue.destination as! DrinkDetailViewController
-            detailVC.drink = drinks[selectedIndex]
+            detailVC.recipe = Recipe(drink: drinks[selectedIndex])
         }
     }
 }

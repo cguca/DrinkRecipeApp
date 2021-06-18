@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DrinklTableViewCell" rowHeight="148" id="KGk-i7-Jjw" customClass="DrinklTableViewCell" customModule="DrinkRecipeApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="517" height="148"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="517" height="148"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mSR-bh-mdS">
+                        <rect key="frame" x="30" y="10" width="100" height="128"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Agr-eq-2dm">
+                        <rect key="frame" x="146" y="10" width="215" height="36"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="glass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLW-PC-wkA">
+                        <rect key="frame" x="220" y="59" width="280" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="category" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cm9-ct-jFH">
+                        <rect key="frame" x="369" y="10" width="133" height="21"/>
+                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Serve in " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wk4-1z-mBm">
+                        <rect key="frame" x="146" y="58" width="66" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Agr-eq-2dm" firstAttribute="leading" secondItem="mSR-bh-mdS" secondAttribute="trailing" constant="16" id="2zT-hq-Hy7"/>
+                    <constraint firstItem="wk4-1z-mBm" firstAttribute="leading" secondItem="Agr-eq-2dm" secondAttribute="leading" id="AUY-jd-a4f"/>
+                    <constraint firstAttribute="bottom" secondItem="mSR-bh-mdS" secondAttribute="bottom" constant="10" id="U3w-Qu-y55"/>
+                    <constraint firstItem="mSR-bh-mdS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="XyK-Zy-h4j"/>
+                    <constraint firstItem="Agr-eq-2dm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="eSV-qB-1w4"/>
+                    <constraint firstItem="cm9-ct-jFH" firstAttribute="leading" secondItem="Agr-eq-2dm" secondAttribute="trailing" constant="8" symbolic="YES" id="iOd-Au-5mF"/>
+                    <constraint firstItem="mSR-bh-mdS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pC7-ag-Lzi"/>
+                    <constraint firstItem="mSR-bh-mdS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="tVb-C6-8sq"/>
+                    <constraint firstItem="bLW-PC-wkA" firstAttribute="top" secondItem="Agr-eq-2dm" secondAttribute="bottom" constant="13" id="zY3-Fj-piC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="catgoryLabel" destination="cm9-ct-jFH" id="DnP-Lz-b4M"/>
+                <outlet property="drinkImageView" destination="mSR-bh-mdS" id="r2v-UL-bqG"/>
+                <outlet property="glassLabel" destination="bLW-PC-wkA" id="UXN-2n-jEQ"/>
+                <outlet property="nameLabel" destination="Agr-eq-2dm" id="kXy-fT-ee9"/>
+            </connections>
+            <point key="canvasLocation" x="-132.60869565217394" y="105.80357142857143"/>
+        </tableViewCell>
+    </objects>
+</document>

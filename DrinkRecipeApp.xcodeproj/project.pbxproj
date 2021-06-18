@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A098CD026659104002EB446 /* HomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A098CCF26659104002EB446 /* HomePageTableViewCell.swift */; };
+		4A0D4ADB26768C520024B536 /* CocktailCoreDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0D4ADA26768C520024B536 /* CocktailCoreDataService.swift */; };
+		4A27589E266C4D6A00CD3506 /* DrinklTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A27589C266C4D6A00CD3506 /* DrinklTableViewCell.swift */; };
+		4A27589F266C4D6A00CD3506 /* DrinklTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A27589D266C4D6A00CD3506 /* DrinklTableViewCell.xib */; };
 		4A30571D2665A82C00980D07 /* HomePageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30571C2665A82C00980D07 /* HomePageTableViewController.swift */; };
 		4A3057202665BF0200980D07 /* DrinkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A30571F2665BF0200980D07 /* DrinkDetailViewController.swift */; };
 		4A3057232665C61900980D07 /* SearchPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A3057222665C61900980D07 /* SearchPageViewController.swift */; };
@@ -15,6 +17,11 @@
 		4A32B4A4266ACD6600920139 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A32B4A3266ACD6600920139 /* Recipe.swift */; };
 		4A4F5C29266B98D300648284 /* IngredientTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4F5C28266B98D300648284 /* IngredientTableViewCell.swift */; };
 		4A73D44D266C1A320081952C /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A73D44C266C1A320081952C /* ShoppingListViewController.swift */; };
+		4A80AA7426793F11003AFB3C /* HomePageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80AA7226793F11003AFB3C /* HomePageCollectionViewCell.swift */; };
+		4A80AA7526793F11003AFB3C /* HomePageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A80AA7326793F11003AFB3C /* HomePageCollectionViewCell.xib */; };
+		4A80AA7A2679569E003AFB3C /* HomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80AA782679569E003AFB3C /* HomePageTableViewCell.swift */; };
+		4A80AA7B2679569E003AFB3C /* HomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A80AA792679569E003AFB3C /* HomePageTableViewCell.xib */; };
+		4A80AA7E267CEB35003AFB3C /* CategoryListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80AA7D267CEB35003AFB3C /* CategoryListingViewController.swift */; };
 		4AAFF7312662D04B003AE626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7302662D04B003AE626 /* AppDelegate.swift */; };
 		4AAFF7332662D04B003AE626 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7322662D04B003AE626 /* SceneDelegate.swift */; };
 		4AAFF7352662D04B003AE626 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7342662D04B003AE626 /* ViewController.swift */; };
@@ -28,7 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A098CCF26659104002EB446 /* HomePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewCell.swift; sourceTree = "<group>"; };
+		4A0D4ADA26768C520024B536 /* CocktailCoreDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailCoreDataService.swift; sourceTree = "<group>"; };
+		4A27589C266C4D6A00CD3506 /* DrinklTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinklTableViewCell.swift; sourceTree = "<group>"; };
+		4A27589D266C4D6A00CD3506 /* DrinklTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinklTableViewCell.xib; sourceTree = "<group>"; };
 		4A30571C2665A82C00980D07 /* HomePageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewController.swift; sourceTree = "<group>"; };
 		4A30571F2665BF0200980D07 /* DrinkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailViewController.swift; sourceTree = "<group>"; };
 		4A3057222665C61900980D07 /* SearchPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPageViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +45,11 @@
 		4A32B4A3266ACD6600920139 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		4A4F5C28266B98D300648284 /* IngredientTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableViewCell.swift; sourceTree = "<group>"; };
 		4A73D44C266C1A320081952C /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
+		4A80AA7226793F11003AFB3C /* HomePageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCollectionViewCell.swift; sourceTree = "<group>"; };
+		4A80AA7326793F11003AFB3C /* HomePageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageCollectionViewCell.xib; sourceTree = "<group>"; };
+		4A80AA782679569E003AFB3C /* HomePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewCell.swift; sourceTree = "<group>"; };
+		4A80AA792679569E003AFB3C /* HomePageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageTableViewCell.xib; sourceTree = "<group>"; };
+		4A80AA7D267CEB35003AFB3C /* CategoryListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListingViewController.swift; sourceTree = "<group>"; };
 		4AAFF72D2662D04B003AE626 /* DrinkRecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkRecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAFF7302662D04B003AE626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAFF7322662D04B003AE626 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +83,7 @@
 				4A3057222665C61900980D07 /* SearchPageViewController.swift */,
 				4A32B49F26670F4600920139 /* FavoritesViewController.swift */,
 				4A73D44C266C1A320081952C /* ShoppingListViewController.swift */,
+				4A80AA7D267CEB35003AFB3C /* CategoryListingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -84,8 +99,13 @@
 		4A098CCE266590C3002EB446 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4A098CCF26659104002EB446 /* HomePageTableViewCell.swift */,
 				4A4F5C28266B98D300648284 /* IngredientTableViewCell.swift */,
+				4A27589C266C4D6A00CD3506 /* DrinklTableViewCell.swift */,
+				4A27589D266C4D6A00CD3506 /* DrinklTableViewCell.xib */,
+				4A80AA7226793F11003AFB3C /* HomePageCollectionViewCell.swift */,
+				4A80AA7326793F11003AFB3C /* HomePageCollectionViewCell.xib */,
+				4A80AA782679569E003AFB3C /* HomePageTableViewCell.swift */,
+				4A80AA792679569E003AFB3C /* HomePageTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -155,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				4AAFF7522662D994003AE626 /* CocktailAPIService.swift */,
+				4A0D4ADA26768C520024B536 /* CocktailCoreDataService.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -217,8 +238,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AAFF7402662D04C003AE626 /* LaunchScreen.storyboard in Resources */,
+				4A80AA7526793F11003AFB3C /* HomePageCollectionViewCell.xib in Resources */,
 				4AAFF73D2662D04C003AE626 /* Assets.xcassets in Resources */,
 				4AAFF7382662D04B003AE626 /* Main.storyboard in Resources */,
+				4A27589F266C4D6A00CD3506 /* DrinklTableViewCell.xib in Resources */,
+				4A80AA7B2679569E003AFB3C /* HomePageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,8 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AAFF7532662D994003AE626 /* CocktailAPIService.swift in Sources */,
-				4A098CD026659104002EB446 /* HomePageTableViewCell.swift in Sources */,
+				4A80AA7A2679569E003AFB3C /* HomePageTableViewCell.swift in Sources */,
 				4A73D44D266C1A320081952C /* ShoppingListViewController.swift in Sources */,
+				4A80AA7E267CEB35003AFB3C /* CategoryListingViewController.swift in Sources */,
 				4A4F5C29266B98D300648284 /* IngredientTableViewCell.swift in Sources */,
 				4AAFF73B2662D04B003AE626 /* DrinkRecipeApp.xcdatamodeld in Sources */,
 				4AAFF7352662D04B003AE626 /* ViewController.swift in Sources */,
@@ -240,7 +265,10 @@
 				4A3057232665C61900980D07 /* SearchPageViewController.swift in Sources */,
 				4AAFF7312662D04B003AE626 /* AppDelegate.swift in Sources */,
 				4AAFF74F2662D10D003AE626 /* Drink.swift in Sources */,
+				4A27589E266C4D6A00CD3506 /* DrinklTableViewCell.swift in Sources */,
+				4A80AA7426793F11003AFB3C /* HomePageCollectionViewCell.swift in Sources */,
 				4AAFF7332662D04B003AE626 /* SceneDelegate.swift in Sources */,
+				4A0D4ADB26768C520024B536 /* CocktailCoreDataService.swift in Sources */,
 				4A32B4A4266ACD6600920139 /* Recipe.swift in Sources */,
 				4A32B4A026670F4600920139 /* FavoritesViewController.swift in Sources */,
 				4A30571D2665A82C00980D07 /* HomePageTableViewController.swift in Sources */,

@@ -18,9 +18,16 @@ class ShoppingListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.tabBar.isHidden = false
         tableView.delegate = self
         tableView.dataSource = self
+//        getSavedShoppingList()
+     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
         getSavedShoppingList()
+        tableView.reloadData()
     }
     
     func getSavedShoppingList()  {
@@ -32,9 +39,23 @@ class ShoppingListViewController: UIViewController {
             }
         }
     }
+    
+    func deleteShoppingItem(name: String) {
+        let fetchRequest: NSFetchRequest<ShoppingListModel> = ShoppingListModel.fetchRequest()
+        let predicate = NSPredicate(format: "name == %@", name)
+        fetchRequest.predicate = predicate
+        if let result = try? viewContext.fetch(fetchRequest) {
+            result.forEach { drink in
+                viewContext.delete(drink)
+            }
+            try? viewContext.save()
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         shoppingList!.count
     }
@@ -46,5 +67,15 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Remove") { [self] (_, indexPath) in
+            print("Removed from shopping list")
+            deleteShoppingItem(name:  self.shoppingList![indexPath.row].name!)
+            self.shoppingList?.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.tableView.reloadData()
+        }
+        
+        return[deleteAction]
+    }
 }

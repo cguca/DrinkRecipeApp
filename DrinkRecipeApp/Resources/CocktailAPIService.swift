@@ -18,6 +18,7 @@ class CocktailAPIService {
         case list(String, String)
         case random
         case photo(String)
+        case ingredientImage(String)
         
         var stringValue: String {
             switch self {
@@ -31,12 +32,15 @@ class CocktailAPIService {
                 return Endpoints.base + "list.php?\(type)=\(value)"
             case .random :
                 return Endpoints.base + "random.php?"
-            case .photo :
-                return Endpoints.base + "/images/media/drink/vrwquq1478252802.jpg/preview"
+            case .photo(let id) :
+                return Endpoints.base + "/images/media/drink/\(id).jpg/preview"
+            case .ingredientImage(let ingredient) :
+                return "https://www.thecocktaildb.com/images/ingredients/\(ingredient).png"
             }
         }
         
         var url: URL {
+            print(stringValue)
             return URL(string: stringValue)!
         }
     }
@@ -53,6 +57,39 @@ class CocktailAPIService {
         return task
     }
     
+    class func list(type: String, query: String, completion: @escaping ([Drink], Error?) -> Void) -> Void {
+        taskForGETRequest(url: Endpoints.list(type, query).url, responseType: CocktailDBResponse.self) { (response, error)
+            in
+            if let response = response {
+                completion(response.drinks, nil)
+            } else {
+                completion([], error)
+            }
+        }
+    }
+    
+    class func filter(type: String, query: String, completion: @escaping ([Drink], Error?) -> Void) -> Void {
+        taskForGETRequest(url: Endpoints.filter(type, query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!).url, responseType: CocktailDBResponse.self) { (response, error)
+            in
+            if let response = response {
+                completion(response.drinks, nil)
+            } else {
+                completion([], error)
+            }
+        }
+    }
+    
+    class func lookup(type: String, query: String, completion: @escaping ([Drink], Error?) -> Void) -> Void {
+        taskForGETRequest(url: Endpoints.lookup(type, query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!).url, responseType: CocktailDBResponse.self) { (response, error)
+            in
+            if let response = response {
+                completion(response.drinks, nil)
+            } else {
+                completion([], error)
+            }
+        }
+    }
+    
     class func getRandomDrink(completion: @escaping ([Drink], Error?) -> Void) {
         taskForGETRequest(url: Endpoints.random.url, responseType: CocktailDBResponse.self) { response, error in
             if let response = response {
@@ -65,6 +102,18 @@ class CocktailAPIService {
     
     class func downloadDrinkImage(imagePath: String, completion: @escaping (Data?, Error?) -> Void) {
         let url = URL(string: imagePath + "/preview")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error)
+            in
+            DispatchQueue.main.async {
+                completion(data, error)
+            }
+        }
+        task.resume()
+    }
+    
+    class func downloadIngredientImage(ingredient: String, completion: @escaping (Data?, Error?) -> Void) {
+        let url = Endpoints.ingredientImage(ingredient.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!).url
+        print(url)
         let task = URLSession.shared.dataTask(with: url) { (data, response, error)
             in
             DispatchQueue.main.async {
