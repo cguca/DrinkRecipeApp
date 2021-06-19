@@ -14,7 +14,7 @@ class ShoppingListViewController: UIViewController {
     
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-    var shoppingList : [ShoppingListModel]?
+    var shoppingList : [ShoppingListModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,21 +57,23 @@ class ShoppingListViewController: UIViewController {
 extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        shoppingList!.count
+        shoppingList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = shoppingList?[indexPath.row].name
+        cell.textLabel?.text = shoppingList[indexPath.row].name
+        let image = UIImage(data: shoppingList[indexPath.row].image!)
+        cell.imageView?.image = image
         return cell
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Remove") { [self] (_, indexPath) in
             print("Removed from shopping list")
-            deleteShoppingItem(name:  self.shoppingList![indexPath.row].name!)
-            self.shoppingList?.remove(at: indexPath.row)
+            deleteShoppingItem(name:  self.shoppingList[indexPath.row].name!)
+            self.shoppingList.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
             self.tableView.reloadData()
         }

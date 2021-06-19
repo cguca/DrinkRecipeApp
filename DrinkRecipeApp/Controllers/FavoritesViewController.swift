@@ -42,7 +42,7 @@ class FavoritesViewController: UIViewController {
         if let result = try? viewContext.fetch(fetchRequest) {
             if result.count > 0 {
                 drinks.append(contentsOf: result)
-    //            images = PhotoAdapter.adapt(photos: result)
+//                images = PhotoAdapter.adapt(photos: result)
     //            newCollctionButton.isEnabled = true
                 
             }
@@ -84,8 +84,8 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
 //        cell.imageView?.image = UIImage(data: drinks[indexPath.row].thumbImage!)
 //        cell.textLabel?.text = drinks[indexPath.row].name
         
-        let drinkImage = UIImage(named: "placeholder")
-//        let drinkImage = UIImage(data: drinks[indexPath.row].thumbImage!)
+//        let drinkImage = UIImage(named: "placeholder")
+        let drinkImage = UIImage(data: drinks[indexPath.row].thumbImage!)
         cell.drinkImageView.image = drinkImage
         cell.catgoryLabel.text = drinks[indexPath.row].category
         cell.nameLabel.text = drinks[indexPath.row].name

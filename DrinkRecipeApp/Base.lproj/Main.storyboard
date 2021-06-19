@@ -150,7 +150,7 @@
             </objects>
             <point key="canvasLocation" x="736" y="-887"/>
         </scene>
-        <!--Cocktail Recipes-->
+        <!--Cocktail-->
         <scene sceneID="hy0-FS-fwI">
             <objects>
                 <viewController id="VXn-wN-hdg" customClass="HomePageTableViewController" customModule="DrinkRecipeApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -210,7 +210,7 @@
                         <viewLayoutGuide key="safeArea" id="Qce-ef-YIv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cocktail Recipes" id="qip-dl-gJL"/>
+                    <navigationItem key="navigationItem" title="Cocktail" id="qip-dl-gJL"/>
                     <connections>
                         <outlet property="activityIndicator" destination="pjh-PJ-uZO" id="0Uf-Ar-OJD"/>
                         <outlet property="collectionView" destination="YjQ-zF-Aw1" id="hp8-xr-CWd"/>
@@ -336,7 +336,7 @@
                         <color key="backgroundColor" red="0.063143350183963776" green="0.46936327219009399" blue="0.85610133409500122" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Drink" id="gty-jE-4rz">
-                        <barButtonItem key="rightBarButtonItem" title="Add to Favorites" image="plus" catalog="system" id="yLG-By-gMZ">
+                        <barButtonItem key="rightBarButtonItem" title="Add to Favorites" image="heart" catalog="system" id="yLG-By-gMZ">
                             <connections>
                                 <action selector="addToFavorites:" destination="IK6-I0-hQg" id="hbU-0i-HD7"/>
                             </connections>
@@ -398,13 +398,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="KpG-LM-kZy"/>
+        <segue reference="waP-uK-nl4"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
