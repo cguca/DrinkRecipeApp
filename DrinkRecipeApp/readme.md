@@ -3,6 +3,9 @@
 ## Functionality
 The app allows you to search for cocktail recipes, save your favorite recipes, and save a shopping list.
 
+## Installation and Usage
+Clone the repository and run with simulator.
+
 ### Pages
 * Home Page
 	- Displays a random cocktail. Clicking on the image brings the user to the drink detail page.
