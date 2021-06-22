@@ -21,14 +21,11 @@ class HomePageTableViewController: ViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
-//        tableView.register(HomePageTableViewCell.nib(), forCellReuseIdentifier: HomePageTableViewCell.identifier)
-        
+                
         collectionView.delegate = self
         collectionView.dataSource = self
         
         let layout = UICollectionViewFlowLayout()
-//        layout.itemSize = CGSize(width: 100, height: 100)
         collectionView.collectionViewLayout = layout
         collectionView.register(HomePageCollectionViewCell.nib(), forCellWithReuseIdentifier: "HomePageCollectionViewCell")
         
@@ -48,7 +45,10 @@ class HomePageTableViewController: ViewController {
     }
     
     func handleRandomDrinkResponse(data: [Drink], error: Error?) {
-        print(data)
+        guard error == nil else {
+            showApiErrorAlert(message: error?.localizedDescription ?? "Connection Issue. Please restart")
+            return
+        }
         drinks.append(contentsOf: data)
         activityIndicator.stopAnimating()
         activityIndicator.isHidden = true
@@ -58,11 +58,20 @@ class HomePageTableViewController: ViewController {
     }
     
     func handleListCategoriesResponse(data: [Drink], error: Error?) {
-
+        guard error == nil else {
+            showApiErrorAlert(message: error?.localizedDescription ?? "Connection Issue. Please restart")
+            return
+        }
         categories.append(contentsOf: data)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }
+    }
+    
+    func showApiErrorAlert(message: String) {
+        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
+        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertVC, animated: true, completion: nil)
     }
 
     // MARK: - Navigation
@@ -71,12 +80,10 @@ class HomePageTableViewController: ViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             let detailVC = segue.destination as! DrinkDetailViewController
-//            detailVC.drink = drinks[selectedIndex]
             detailVC.recipe = Recipe(drink: drinks[selectedIndex])
         }
         if segue.identifier == "showListing" {
             let detailVC = segue.destination as! CategoryListingViewController
-//            detailVC.drink = drinks[selectedIndex]
             let selectedCategory = Recipe(drink:categories[selectedIndex])
             detailVC.category = selectedCategory
         }
@@ -98,12 +105,10 @@ extension HomePageTableViewController: UITableViewDataSource, UITableViewDelegat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomePageTableViewCell.identifier, for: indexPath) as! HomePageTableViewCell
         let drink = drinks[indexPath.row]
-//        let imagePath =  drink.strDrinkThumb!
         
         guard drink.strDrinkThumb != nil else {
             let image = UIImage(named: "placeholder")
             cell.drinkImageView?.image = image
-//            cell.configure(with: image!)
             cell.setNeedsLayout()
             return cell
         }
@@ -113,7 +118,6 @@ extension HomePageTableViewController: UITableViewDataSource, UITableViewDelegat
             }
        
             let image = UIImage(data: data)
-//            cell.imageView?.image = image
             cell.configure(with: image!, name: self.drinks[indexPath.row].strDrink!)
             cell.setNeedsLayout()
         }
@@ -134,11 +138,7 @@ extension HomePageTableViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         selectedIndex = indexPath.row
-//        let category = categories[selectedIndex]
         performSegue(withIdentifier: "showListing", sender: nil)
-       
-        
-        //execute seque
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

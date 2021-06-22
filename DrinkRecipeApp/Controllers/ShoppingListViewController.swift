@@ -21,7 +21,6 @@ class ShoppingListViewController: UIViewController {
         tabBarController?.tabBar.isHidden = false
         tableView.delegate = self
         tableView.dataSource = self
-//        getSavedShoppingList()
      }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,7 +70,7 @@ extension ShoppingListViewController: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "Remove") { [self] (_, indexPath) in
-            print("Removed from shopping list")
+        
             deleteShoppingItem(name:  self.shoppingList[indexPath.row].name!)
             self.shoppingList.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)

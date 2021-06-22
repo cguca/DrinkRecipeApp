@@ -28,13 +28,11 @@ class CategoryListingViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        drinks = []
         selectedIndex = 0
         tabBarController?.tabBar.isHidden = true
     }
     
     func handleCategoriesDrinksResponse(data: [Drink], error: Error?) {
-//        print(data)
         drinks = []
         drinks.append(contentsOf: data)
         DispatchQueue.main.async {
@@ -68,7 +66,6 @@ extension CategoryListingViewController: UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//       tableView.dequeueReusableCell(withIdentifier: )!
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryDrinksCell", for: indexPath)
         let drink = drinks[indexPath.row]
         

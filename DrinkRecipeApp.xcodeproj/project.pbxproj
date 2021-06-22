@@ -32,6 +32,7 @@
 		4AAFF74C2662D0CC003AE626 /* CocktailDBResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF74B2662D0CC003AE626 /* CocktailDBResponse.swift */; };
 		4AAFF74F2662D10D003AE626 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF74E2662D10D003AE626 /* Drink.swift */; };
 		4AAFF7532662D994003AE626 /* CocktailAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7522662D994003AE626 /* CocktailAPIService.swift */; };
+		4AE28DB626823FCA00F7BD3C /* readme.md in Resources */ = {isa = PBXBuildFile; fileRef = 4AE28DB526823FCA00F7BD3C /* readme.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		4AAFF74B2662D0CC003AE626 /* CocktailDBResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailDBResponse.swift; sourceTree = "<group>"; };
 		4AAFF74E2662D10D003AE626 /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		4AAFF7522662D994003AE626 /* CocktailAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CocktailAPIService.swift; sourceTree = "<group>"; };
+		4AE28DB526823FCA00F7BD3C /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 		4AAFF72F2662D04B003AE626 /* DrinkRecipeApp */ = {
 			isa = PBXGroup;
 			children = (
+				4AE28DB526823FCA00F7BD3C /* readme.md */,
 				4A098CCD266590B7002EB446 /* View */,
 				4A098CC12665763E002EB446 /* Controllers */,
 				4AAFF7512662D96E003AE626 /* Resources */,
@@ -241,6 +244,7 @@
 				4A80AA7526793F11003AFB3C /* HomePageCollectionViewCell.xib in Resources */,
 				4AAFF73D2662D04C003AE626 /* Assets.xcassets in Resources */,
 				4AAFF7382662D04B003AE626 /* Main.storyboard in Resources */,
+				4AE28DB626823FCA00F7BD3C /* readme.md in Resources */,
 				4A27589F266C4D6A00CD3506 /* DrinklTableViewCell.xib in Resources */,
 				4A80AA7B2679569E003AFB3C /* HomePageTableViewCell.xib in Resources */,
 			);

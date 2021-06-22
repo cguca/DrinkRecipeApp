@@ -100,34 +100,6 @@ class DrinkDetailViewController: UIViewController {
                 showSaveToFavoritesAlert(message: "Error removing from your favorites")
             }
         }
-       
-       
-        
-//        let drinkModel = DrinkModel(context: viewContext)
-//        drinkModel.id = recipe?.id
-//        drinkModel.alchoholic = recipe?.alcoholic
-//        drinkModel.drinkAlternative = recipe?.alternate
-//        drinkModel.glass = recipe?.glass
-//        drinkModel.iba = recipe?.iba
-//        drinkModel.instructions = recipe?.instructions
-//        drinkModel.name = recipe?.name
-//        drinkModel.tags = recipe?.tags
-//        drinkModel.thumbImage = recipe?.image
-//
-//        let ingredients = recipe?.ingredients
-//        ingredients?.forEach({ (key, value) in
-//            let ingredientModel = IngredientModel(context: viewContext)
-//            ingredientModel.name = key
-//            ingredientModel.measure = value
-//            ingredientModel.drink = drinkModel
-//
-//        })
-//
-//        do {
-//            try viewContext.save()
-//        }  catch {
-//            print("There was an error while saving the image to core data: \(error.localizedDescription)")
-//        }
     }
     
     func showSaveToFavoritesAlert(message: String) {

@@ -25,21 +25,11 @@ class IngredientTableViewCell: UITableViewCell {
     
     override func updateConfiguration(using state: UICellConfigurationState) {
         super.updateConfiguration(using: state)
-
-//        var configuration = defaultContentConfiguration().updated(for: state)
         var bgConfiguration = backgroundConfiguration?.updated(for: state)
-
-//        configuration.text = textLabel?.text
-        
         if state.isHighlighted || state.isSelected {
-//            configuration.text = textLabel?.text
-//            configuration.textProperties.color = .white
-//            configuration.imageProperties.tintColor = .green
             bgConfiguration?.backgroundColor = .white
         }
-        print("In the cell file here is the text \(textLabel?.text)")
-//        contentConfiguration = configuration
-        backgroundConfiguration = bgConfiguration
+         backgroundConfiguration = bgConfiguration
 
     }
 }
