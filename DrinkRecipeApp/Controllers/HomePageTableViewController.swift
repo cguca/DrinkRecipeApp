@@ -68,12 +68,6 @@ class HomePageTableViewController: ViewController {
         }
     }
     
-//    func showApiErrorAlert(message: String) {
-//        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
-//        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//        self.present(alertVC, animated: true, completion: nil)
-//    }
-
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

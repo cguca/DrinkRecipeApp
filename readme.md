@@ -31,7 +31,7 @@ Thi app allows users to search for cocktail recipes, save  favorite recipes, and
 The app is straight forward to build. It is does not use any third party frameworks or dependancies. Downloading the code from the repository The code can be downloaded and compiled using Xcode.
 
 ## Requirements
-* Xcode 12
+* Xcode 14.3
 * Swift 5
 
 ## License

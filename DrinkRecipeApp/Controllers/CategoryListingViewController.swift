@@ -10,6 +10,7 @@ import UIKit
 class CategoryListingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var drinks = [Drink]()
     var selectedIndex = 0
@@ -22,6 +23,8 @@ class CategoryListingViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tabBarController?.tabBar.isHidden = true
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
         CocktailAPIService.filter(type: "c", query: (category?.category)!, completion: handleCategoriesDrinksResponse(data:error:))
         navigationItem.title = (category?.category)!
        
@@ -34,6 +37,8 @@ class CategoryListingViewController: UIViewController {
     }
     
     func handleCategoriesDrinksResponse(data: [Drink], error: Error?) {
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
         guard error == nil else {
             self.showApiErrorAlert(message: error?.localizedDescription ?? "Connection Issue. Please restart")
             return
@@ -58,11 +63,7 @@ class CategoryListingViewController: UIViewController {
         }
     }
     
-//    func showApiErrorAlert(message: String) {
-//        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
-//        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//        self.present(alertVC, animated: true, completion: nil)
-//    }
+
 
 }
 

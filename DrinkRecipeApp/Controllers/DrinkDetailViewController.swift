@@ -116,11 +116,6 @@ class DrinkDetailViewController: UIViewController {
         self.present(alertVC, animated: true, completion: nil)
     }
     
-//    func showApiErrorAlert(message: String) {
-//        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
-//        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//        self.present(alertVC, animated: true, completion: nil)
-//    }
 }
 
 extension DrinkDetailViewController: UITableViewDelegate, UITableViewDataSource {
