@@ -38,4 +38,6 @@ The app is straight forward to build. It is does not use any third party framewo
 GNU General Public License version 3.
 
 ## Known bugs..
-The connection to the Cocktail DB API is erratic the first time the simulator starts.  In case of a connection timeout error, stop and restart the simulator. The connection should stabilize.
+* The connection to the Cocktail DB API is erratic the first time the simulator starts.  In case of a connection timeout error, stop and restart the simulator. The connection should stabilize.
+* Bad data. Some cocktail recipes ingredients are missing measurements.
+
