@@ -9,7 +9,8 @@ import UIKit
 
 class IngredientTableViewCell: UITableViewCell {
     static let identifier = "IngredientTableViewCell"
-        
+    @IBOutlet weak var ingredientActivityIndicator: UIActivityIndicatorView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,6 +22,16 @@ class IngredientTableViewCell: UITableViewCell {
     
     public func configure(label: String) {
         textLabel?.text = label
+    }
+    
+    public func startActivityIndicator() {
+        ingredientActivityIndicator.isHidden = false
+        ingredientActivityIndicator.startAnimating()
+    }
+    
+    public func stopActivityIndicator() {
+        ingredientActivityIndicator.isHidden = true
+        ingredientActivityIndicator.stopAnimating()
     }
     
     override func updateConfiguration(using state: UICellConfigurationState) {

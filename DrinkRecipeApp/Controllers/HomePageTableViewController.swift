@@ -68,11 +68,11 @@ class HomePageTableViewController: ViewController {
         }
     }
     
-    func showApiErrorAlert(message: String) {
-        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
-        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(alertVC, animated: true, completion: nil)
-    }
+//    func showApiErrorAlert(message: String) {
+//        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
+//        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//        self.present(alertVC, animated: true, completion: nil)
+//    }
 
     // MARK: - Navigation
 
@@ -113,6 +113,7 @@ extension HomePageTableViewController: UITableViewDataSource, UITableViewDelegat
             return cell
         }
         CocktailAPIService.downloadDrinkImage(imagePath: drink.strDrinkThumb!) { [self] (data, error) in
+            
             guard let data = data else {
                 return
             }

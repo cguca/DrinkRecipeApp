@@ -22,6 +22,7 @@
 		4A80AA7A2679569E003AFB3C /* HomePageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80AA782679569E003AFB3C /* HomePageTableViewCell.swift */; };
 		4A80AA7B2679569E003AFB3C /* HomePageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A80AA792679569E003AFB3C /* HomePageTableViewCell.xib */; };
 		4A80AA7E267CEB35003AFB3C /* CategoryListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A80AA7D267CEB35003AFB3C /* CategoryListingViewController.swift */; };
+		4A9AB9B82686A95F00853ED6 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A9AB9B72686A95F00853ED6 /* ViewControllerExtension.swift */; };
 		4AAFF7312662D04B003AE626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7302662D04B003AE626 /* AppDelegate.swift */; };
 		4AAFF7332662D04B003AE626 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7322662D04B003AE626 /* SceneDelegate.swift */; };
 		4AAFF7352662D04B003AE626 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AAFF7342662D04B003AE626 /* ViewController.swift */; };
@@ -51,6 +52,7 @@
 		4A80AA782679569E003AFB3C /* HomePageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageTableViewCell.swift; sourceTree = "<group>"; };
 		4A80AA792679569E003AFB3C /* HomePageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageTableViewCell.xib; sourceTree = "<group>"; };
 		4A80AA7D267CEB35003AFB3C /* CategoryListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListingViewController.swift; sourceTree = "<group>"; };
+		4A9AB9B72686A95F00853ED6 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		4AAFF72D2662D04B003AE626 /* DrinkRecipeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrinkRecipeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AAFF7302662D04B003AE626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AAFF7322662D04B003AE626 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				4A32B49F26670F4600920139 /* FavoritesViewController.swift */,
 				4A73D44C266C1A320081952C /* ShoppingListViewController.swift */,
 				4A80AA7D267CEB35003AFB3C /* CategoryListingViewController.swift */,
+				4A9AB9B72686A95F00853ED6 /* ViewControllerExtension.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				4AAFF73B2662D04B003AE626 /* DrinkRecipeApp.xcdatamodeld in Sources */,
 				4AAFF7352662D04B003AE626 /* ViewController.swift in Sources */,
 				4A3057202665BF0200980D07 /* DrinkDetailViewController.swift in Sources */,
+				4A9AB9B82686A95F00853ED6 /* ViewControllerExtension.swift in Sources */,
 				4AAFF74C2662D0CC003AE626 /* CocktailDBResponse.swift in Sources */,
 				4A3057232665C61900980D07 /* SearchPageViewController.swift in Sources */,
 				4AAFF7312662D04B003AE626 /* AppDelegate.swift in Sources */,

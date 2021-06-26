@@ -15,6 +15,7 @@ class DrinkDetailViewController: UIViewController {
     @IBOutlet weak var instructionsLabel: UILabel!
     @IBOutlet weak var titleNavigationIten: UINavigationItem!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var imageActivityIndicator: UIActivityIndicatorView!
     
     let viewContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
@@ -44,13 +45,20 @@ class DrinkDetailViewController: UIViewController {
             return
         }
         
-        CocktailAPIService.downloadDrinkImage(imagePath: (recipe?.imageUrl)!) { (data, error) in
+        imageActivityIndicator.isHidden = false
+        imageActivityIndicator.startAnimating()
+        
+        CocktailAPIService.downloadDrinkImage(imagePath: (recipe?.imageUrl)!) { [self] (data, error) in
             guard let data = data else {
                 return
             }
+            
+            
             let image = UIImage(data: data)
             self.recipe?.image = data
             DispatchQueue.main.async {
+                self.imageActivityIndicator.isHidden = true
+                self.imageActivityIndicator.stopAnimating()
                 self.drinkImage.image = image
             }
         }
@@ -107,6 +115,12 @@ class DrinkDetailViewController: UIViewController {
         alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         self.present(alertVC, animated: true, completion: nil)
     }
+    
+//    func showApiErrorAlert(message: String) {
+//        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
+//        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//        self.present(alertVC, animated: true, completion: nil)
+//    }
 }
 
 extension DrinkDetailViewController: UITableViewDelegate, UITableViewDataSource {
@@ -131,11 +145,20 @@ extension DrinkDetailViewController: UITableViewDelegate, UITableViewDataSource 
         cell.configure(label: "\(key) - \(String(describing: ingredients![key]!))")
    
         cell.imageView?.image = UIImage(named: "placeholder")
+        
+        cell.startActivityIndicator()
         CocktailAPIService.downloadIngredientImage(ingredient: key) { (data, error) in
+            guard error == nil else {
+                self.showApiErrorAlert(message: error?.localizedDescription ?? "Connection Issue. Please restart")
+                cell.stopActivityIndicator()
+                return
+            }
+            
             guard let data = data else {
                 return
             }
             
+            cell.stopActivityIndicator()
             let image = UIImage(data: data)
             cell.imageView?.image = image
             cell.setNeedsLayout()

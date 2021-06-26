@@ -37,6 +37,7 @@ class CocktailCoreDataService {
     }
     
     class func saveShoppingListItem(name: String, imageData: Data) {
+        
         let shoppingListModel = ShoppingListModel(context: viewContext)
         shoppingListModel.name = name
         shoppingListModel.image = imageData

@@ -13,12 +13,15 @@ class SearchPageViewController: UIViewController {
     var selectedIndex = 0
     var currentSearchTask: URLSessionTask?
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = false
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +43,23 @@ extension SearchPageViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         currentSearchTask?.cancel()
+        if searchText.count > 0 {
+            DispatchQueue.main.async {
+                self.activityIndicator.isHidden = false
+                self.activityIndicator.startAnimating()
+            }
+        }
+        
         currentSearchTask = CocktailAPIService.search(type: "s", query: searchText) { (drinks, error) in
+            
+            self.activityIndicator.isHidden = true
+            self.activityIndicator.stopAnimating()
+            
+            guard error == nil else {
+                self.showApiErrorAlert(message: error?.localizedDescription ?? "Connection Issue. Please restart")
+                return
+            }
+            
             self.drinks = drinks
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -78,7 +97,7 @@ extension SearchPageViewController: UITableViewDelegate, UITableViewDataSource {
         let drink = drinks[indexPath.row]
         
         cell.textLabel?.text = drink.strDrink
-        cell.imageView?.image = UIImage(named: "PosterPlaceholder")
+        cell.imageView?.image = UIImage(named: "placeholder")
         CocktailAPIService.downloadDrinkImage(imagePath: drink.strDrinkThumb!) { (data, error) in
             guard let data = data else {
                 return

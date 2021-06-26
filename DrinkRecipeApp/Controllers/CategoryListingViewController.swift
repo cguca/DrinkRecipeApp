@@ -15,6 +15,7 @@ class CategoryListingViewController: UIViewController {
     var selectedIndex = 0
     var category: Recipe?
     var selectedRecipe : Recipe?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,11 @@ class CategoryListingViewController: UIViewController {
     }
     
     func handleCategoriesDrinksResponse(data: [Drink], error: Error?) {
+        guard error == nil else {
+            self.showApiErrorAlert(message: error?.localizedDescription ?? "Connection Issue. Please restart")
+            return
+        }
+        
         drinks = []
         drinks.append(contentsOf: data)
         DispatchQueue.main.async {
@@ -52,6 +58,11 @@ class CategoryListingViewController: UIViewController {
         }
     }
     
+//    func showApiErrorAlert(message: String) {
+//        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .actionSheet)
+//        alertVC.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//        self.present(alertVC, animated: true, completion: nil)
+//    }
 
 }
 
@@ -70,8 +81,14 @@ extension CategoryListingViewController: UITableViewDelegate, UITableViewDataSou
         let drink = drinks[indexPath.row]
         
         cell.textLabel?.text = drink.strDrink
-        cell.imageView?.image = UIImage(named: "PosterPlaceholder")
+        cell.imageView?.image = UIImage(named: "placeholder")
+        
         CocktailAPIService.downloadDrinkImage(imagePath: drink.strDrinkThumb!) { (data, error) in
+            guard error == nil else {
+                self.showApiErrorAlert(message: error?.localizedDescription ?? "Connection Issue. Please restart")
+                return
+            }
+            
             guard let data = data else {
                 return
             }
@@ -86,6 +103,10 @@ extension CategoryListingViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
         CocktailAPIService.lookup(type: "i", query: drinks[selectedIndex].idDrink!) {(data, error) in
+            guard error == nil else {
+                self.showApiErrorAlert(message: error?.localizedDescription ?? "Connection Issue. Please restart")
+                return
+            }
             self.selectedRecipe = Recipe(drink: data[0])
             self.performSegue(withIdentifier: "showDetail", sender: nil)
         }
