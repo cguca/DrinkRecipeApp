@@ -126,6 +126,7 @@
 		4AAFF7242662D04B003AE626 = {
 			isa = PBXGroup;
 			children = (
+				4AE28DB82682499500F7BD3C /* readme.md */,
 				4AAFF72F2662D04B003AE626 /* DrinkRecipeApp */,
 				4AAFF72E2662D04B003AE626 /* Products */,
 			);
@@ -142,7 +143,6 @@
 		4AAFF72F2662D04B003AE626 /* DrinkRecipeApp */ = {
 			isa = PBXGroup;
 			children = (
-				4AE28DB82682499500F7BD3C /* readme.md */,
 				4A098CCD266590B7002EB446 /* View */,
 				4A098CC12665763E002EB446 /* Controllers */,
 				4AAFF7512662D96E003AE626 /* Resources */,
